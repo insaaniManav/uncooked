@@ -6,30 +6,34 @@
 }
 
 :root {
-    --bg-primary: #0A0A0A;
-    --bg-secondary: #111111;
-    --text-primary: #E8E8E8;
-    --text-secondary: #A0A0A0;
-    --border-color: #333333;
-    --accent-green: #CCFF00;
-    --accent-purple: #6A0DAD;
+    --bg-primary: #1A1814;
+    --bg-secondary: #231F1B;
+    --text-primary: #F5F0E8;
+    --text-secondary: #A89F94;
+    --border-color: #3D3632;
+    --accent-warm: #E07B4C;
+    --accent-gold: #C4A35A;
+    --accent-cream: #F5F0E8;
 }
 
 body {
-    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
     background-color: var(--bg-primary);
     color: var(--text-primary);
-    font-size: 16px;
-    line-height: 1.6;
+    font-size: 17px;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
-    text-transform: uppercase;
+    font-family: 'Playfair Display', Georgia, serif;
     font-weight: 700;
+}
+
+.mono {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
 }
 
 /* Navbar */
@@ -51,12 +55,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-left .logo {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
-    font-size: 18px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
     color: var(--text-primary);
     text-decoration: none;
     font-weight: 700;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
+    font-style: italic;
 }
 
 .nav-right {
@@ -65,12 +70,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
-    font-size: 14px;
-    color: var(--text-primary);
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--text-secondary);
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
     transition: color 0.2s ease;
 }
 
@@ -79,15 +84,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link:hover {
-    color: var(--accent-green);
+    color: var(--accent-warm);
 }
 
 .nav-link .bracket {
-    color: var(--accent-green);
+    color: var(--accent-gold);
 }
 
 .nav-link.subscribe-link .bracket {
-    color: var(--accent-green);
+    color: var(--accent-gold);
 }
 
 .nav-border {
@@ -115,12 +120,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-headline {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
-    font-size: clamp(32px, 6vw, 96px);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(36px, 7vw, 108px);
     font-weight: 700;
-    line-height: 0.9;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-transform: none;
     color: var(--text-primary);
     display: flex;
     flex-direction: column;
@@ -145,29 +150,31 @@ h1, h2, h3, h4, h5, h6 {
 /* Scrolling Ticker */
 .ticker-container {
     width: 100%;
-    background-color: var(--accent-green);
+    background-color: var(--bg-secondary);
     overflow: hidden;
     position: relative;
-    height: 56px;
+    height: 52px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
 }
 
 .ticker {
     display: flex;
     white-space: nowrap;
-    animation: scroll-ticker 18s linear infinite;
+    animation: scroll-ticker 25s linear infinite;
 }
 
 .ticker-text {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
+    font-family: 'Source Serif 4', Georgia, serif;
     font-size: 14px;
-    font-weight: 700;
-    color: #000000;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    padding: 0 80px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--accent-gold);
+    text-transform: none;
+    letter-spacing: 0.02em;
+    padding: 0 60px;
 }
 
 @keyframes scroll-ticker {
@@ -222,20 +229,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .data-label-text {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
-    font-size: 14px;
-    font-weight: 700;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 11px;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: var(--text-secondary);
 }
 
 .data-value-text {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
-    font-size: 18px;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 16px;
     font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    text-transform: none;
+    letter-spacing: 0;
     color: var(--text-primary);
 }
 
@@ -264,16 +271,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .value-label:hover {
-    animation: glitch-flash-green-dark 0.2s ease;
+    background-color: var(--accent-warm);
+}
+
+.value-label:hover .value-label-text {
+    color: var(--bg-primary);
 }
 
 .value-label-text {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
-    font-size: 16px;
-    font-weight: 700;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 13px;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--text-primary);
+    color: var(--accent-gold);
+    transition: color 0.2s ease;
 }
 
 .value-content {
@@ -283,10 +295,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .value-text {
-    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Source Serif 4', Georgia, serif;
     font-size: 20px;
     font-weight: 400;
-    line-height: 1.7;
+    line-height: 1.8;
     color: var(--text-primary);
     margin: 0;
 }
@@ -307,12 +319,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .how-title {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
-    font-size: 24px;
-    font-weight: 700;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 13px;
+    font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-primary);
+    letter-spacing: 0.15em;
+    color: var(--text-secondary);
     margin: 0;
 }
 
@@ -335,43 +347,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .how-step:hover {
-    background-color: var(--accent-green);
-}
-
-.how-step:hover .step-number,
-.how-step:hover .step-label,
-.how-step:hover .step-desc {
-    color: #000000;
+    background-color: var(--bg-secondary);
 }
 
 .how-step:hover .step-number {
-    color: #000000;
+    color: var(--accent-warm);
 }
 
 .step-number {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
-    font-size: 48px;
-    font-weight: 700;
-    color: var(--accent-green);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 56px;
+    font-weight: 400;
+    color: var(--accent-gold);
     line-height: 1;
     transition: color 0.2s ease;
 }
 
 .step-label {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
-    font-size: 16px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 18px;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    text-transform: none;
+    letter-spacing: 0;
     color: var(--text-primary);
     transition: color 0.2s ease;
 }
 
 .step-desc {
-    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 16px;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 15px;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.7;
     color: var(--text-secondary);
     transition: color 0.2s ease;
 }
@@ -393,32 +399,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta-block:hover {
-    background-color: var(--accent-green);
+    background-color: var(--accent-warm);
 }
 
 .cta-block:hover .cta-text {
-    color: #000000;
+    color: var(--bg-primary);
 }
 
 .cta-text {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
-    font-size: 24px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
+    text-transform: none;
+    letter-spacing: 0.02em;
     color: var(--text-primary);
     transition: color 0.3s ease;
 }
 
-/* Text Selection - Neon Green Highlight */
+/* Text Selection */
 ::selection {
-    background-color: var(--accent-green);
-    color: #000000;
+    background-color: var(--accent-warm);
+    color: var(--bg-primary);
 }
 
 ::-moz-selection {
-    background-color: var(--accent-green);
-    color: #000000;
+    background-color: var(--accent-warm);
+    color: var(--bg-primary);
 }
 
 /* About Page - Header Section */
@@ -433,12 +439,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-title {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: clamp(48px, 8vw, 120px);
     font-weight: 700;
-    line-height: 0.9;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    text-transform: none;
     color: var(--text-primary);
     margin-bottom: 40px;
     text-align: left;
@@ -446,29 +452,31 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-ticker-container {
     width: 100%;
-    background-color: var(--accent-green);
+    background-color: var(--bg-secondary);
     overflow: hidden;
     position: relative;
-    height: 56px;
+    height: 52px;
     display: flex;
     align-items: center;
     margin-bottom: 0;
+    border-top: 1px solid var(--border-color);
 }
 
 .about-ticker {
     display: flex;
     white-space: nowrap;
-    animation: scroll-ticker 20s linear infinite;
+    animation: scroll-ticker 25s linear infinite;
 }
 
 .about-ticker-text {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
+    font-family: 'Source Serif 4', Georgia, serif;
     font-size: 14px;
-    font-weight: 700;
-    color: #000000;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    padding: 0 80px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--accent-gold);
+    text-transform: none;
+    letter-spacing: 0.02em;
+    padding: 0 60px;
 }
 
 /* Spec Sheet Grid */
@@ -497,11 +505,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .spec-label:hover {
-    animation: glitch-flash-green-dark 0.2s ease;
+    background-color: var(--accent-warm);
+}
+
+.spec-label:hover .spec-label-text {
+    color: var(--bg-primary);
 }
 
 .spec-row:nth-child(even) .spec-label:hover {
-    animation: glitch-flash-purple-dark 0.2s ease;
+    background-color: var(--accent-gold);
 }
 
 @keyframes glitch-flash-green {
@@ -553,12 +565,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .spec-label-text {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
-    font-size: 18px;
-    font-weight: 700;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 13px;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--text-primary);
+    color: var(--accent-gold);
+    transition: color 0.2s ease;
 }
 
 .spec-content {
@@ -569,7 +582,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .spec-narrative {
-    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Source Serif 4', Georgia, serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.8;
@@ -591,9 +604,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .spec-list-num {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
+    font-family: 'Playfair Display', Georgia, serif;
     font-weight: 700;
-    color: var(--accent-green);
+    color: var(--accent-warm);
     min-width: 24px;
 }
 
@@ -679,53 +692,54 @@ h1, h2, h3, h4, h5, h6 {
     padding: 40px;
     background-color: var(--bg-primary);
     border: none;
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     text-align: left;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 16px;
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
     color: var(--text-primary);
     transition: background-color 0.2s ease;
 }
 
 .faq-question:hover {
-    background-color: var(--accent-green);
-    color: #000000;
+    background-color: var(--bg-secondary);
 }
 
 .faq-question:hover .faq-q-label,
 .faq-question:hover .faq-q-text {
-    color: #000000;
+    color: var(--accent-warm);
 }
 
 .faq-q-label {
+    font-family: 'Playfair Display', Georgia, serif;
     font-weight: 700;
-    color: var(--text-primary);
+    font-style: italic;
+    color: var(--accent-gold);
     transition: color 0.2s ease;
 }
 
 .faq-q-text {
     flex: 1;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--text-primary);
     transition: color 0.2s ease;
 }
 
 .faq-toggle {
     font-size: 24px;
-    font-weight: 700;
-    color: var(--accent-green);
+    font-weight: 400;
+    color: var(--accent-gold);
     transition: transform 0.3s ease;
 }
 
 .faq-question:hover .faq-toggle {
-    color: #000000;
+    color: var(--accent-warm);
 }
 
 .faq-question[aria-expanded="true"] .faq-toggle {
@@ -737,12 +751,12 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
     transition: max-height 0.3s ease;
     background-color: var(--bg-secondary);
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     gap: 16px;
     padding: 0 40px;
-    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Source Serif 4', Georgia, serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.8;
@@ -750,10 +764,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .faq-a-label {
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
+    font-family: 'Playfair Display', Georgia, serif;
     font-weight: 700;
-    text-transform: uppercase;
-    color: var(--accent-green);
+    font-style: italic;
+    text-transform: none;
+    color: var(--accent-warm);
 }
 
 .faq-a-text {
@@ -777,10 +792,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-item {
     padding: 32px 24px;
-    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
-    font-size: 14px;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
     border-right: 1px solid var(--border-color);
     text-align: left;
     color: var(--text-secondary);
@@ -797,7 +812,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-link:hover {
-    color: var(--accent-green);
+    color: var(--accent-warm);
 }
 
 /* Responsive Design */
