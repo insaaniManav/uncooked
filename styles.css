@@ -5,10 +5,20 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-primary: #0A0A0A;
+    --bg-secondary: #111111;
+    --text-primary: #E8E8E8;
+    --text-secondary: #A0A0A0;
+    --border-color: #333333;
+    --accent-green: #CCFF00;
+    --accent-purple: #6A0DAD;
+}
+
 body {
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-    background-color: #F0F0F0;
-    color: #000000;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     font-size: 16px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -26,9 +36,9 @@ h1, h2, h3, h4, h5, h6 {
 .navbar {
     position: sticky;
     top: 0;
-    background-color: #F0F0F0;
+    background-color: var(--bg-primary);
     z-index: 1000;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .nav-container {
@@ -43,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-left .logo {
     font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
     font-size: 18px;
-    color: #000000;
+    color: var(--text-primary);
     text-decoration: none;
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -57,7 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link {
     font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
     font-size: 14px;
-    color: #000000;
+    color: var(--text-primary);
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -65,31 +75,31 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link.subscribe-link {
-    color: #000000;
+    color: var(--text-primary);
 }
 
 .nav-link:hover {
-    color: #6A0DAD;
+    color: var(--accent-green);
 }
 
 .nav-link .bracket {
-    color: #CCFF00;
+    color: var(--accent-green);
 }
 
 .nav-link.subscribe-link .bracket {
-    color: #CCFF00;
+    color: var(--accent-green);
 }
 
 .nav-border {
     width: 100%;
     height: 1px;
-    background-color: #000000;
+    background-color: var(--border-color);
 }
 
 /* Hero Section */
 .hero {
     padding: 120px 40px;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid var(--border-color);
     position: relative;
 }
 
@@ -111,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0.9;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: #000000;
+    color: var(--text-primary);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,13 +145,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Scrolling Ticker */
 .ticker-container {
     width: 100%;
-    background-color: #000000;
+    background-color: var(--accent-green);
     overflow: hidden;
     position: relative;
     height: 56px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .ticker {
@@ -154,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
     font-size: 14px;
     font-weight: 700;
-    color: #CCFF00;
+    color: #000000;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     padding: 0 80px;
@@ -172,22 +182,22 @@ h1, h2, h3, h4, h5, h6 {
 /* Data Section */
 .data-section {
     padding: 60px 0;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .data-container {
     width: 100%;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .data-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    border-top: 1px solid #000000;
+    border-top: 1px solid var(--border-color);
 }
 
 .data-col {
-    border-right: 1px solid #000000;
+    border-right: 1px solid var(--border-color);
     display: grid;
     grid-template-rows: repeat(3, 1fr);
 }
@@ -198,7 +208,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .data-item {
     padding: 40px 40px;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     align-items: center;
 }
@@ -217,7 +227,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: #000000;
+    color: var(--text-secondary);
 }
 
 .data-value-text {
@@ -226,31 +236,168 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    color: var(--text-primary);
+}
+
+/* Value Proposition Section */
+.value-section {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.value-container {
+    width: 100%;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    border-top: 1px solid var(--border-color);
+}
+
+.value-label {
+    padding: 60px 40px;
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-secondary);
+    transition: background-color 0.2s ease;
+}
+
+.value-label:hover {
+    animation: glitch-flash-green-dark 0.2s ease;
+}
+
+.value-label-text {
+    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-primary);
+}
+
+.value-content {
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+}
+
+.value-text {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* How It Works Section */
+.how-section {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.how-container {
+    width: 100%;
+}
+
+.how-header {
+    padding: 60px 40px 40px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.how-title {
+    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.how-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.how-step {
+    padding: 60px 40px;
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.how-step:last-child {
+    border-right: none;
+}
+
+.how-step:hover {
+    background-color: var(--accent-green);
+}
+
+.how-step:hover .step-number,
+.how-step:hover .step-label,
+.how-step:hover .step-desc {
     color: #000000;
+}
+
+.how-step:hover .step-number {
+    color: #000000;
+}
+
+.step-number {
+    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--accent-green);
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.step-label {
+    font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-primary);
+    transition: color 0.2s ease;
+}
+
+.step-desc {
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
 }
 
 /* CTA Section */
 .cta-section {
     width: 100%;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .cta-block {
     width: 100%;
     padding: 60px 40px;
-    background-color: #F0F0F0;
-    border-top: 1px solid #000000;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
 }
 
 .cta-block:hover {
-    background-color: #000000;
+    background-color: var(--accent-green);
 }
 
 .cta-block:hover .cta-text {
-    color: #F0F0F0;
+    color: #000000;
 }
 
 .cta-text {
@@ -259,25 +406,25 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    color: #000000;
+    color: var(--text-primary);
     transition: color 0.3s ease;
 }
 
 /* Text Selection - Neon Green Highlight */
 ::selection {
-    background-color: #CCFF00;
+    background-color: var(--accent-green);
     color: #000000;
 }
 
 ::-moz-selection {
-    background-color: #CCFF00;
+    background-color: var(--accent-green);
     color: #000000;
 }
 
 /* About Page - Header Section */
 .about-header {
     padding: 120px 40px 0;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .about-header-content {
@@ -292,14 +439,14 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0.9;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: #000000;
+    color: var(--text-primary);
     margin-bottom: 40px;
     text-align: left;
 }
 
 .about-ticker-container {
     width: 100%;
-    background-color: #000000;
+    background-color: var(--accent-green);
     overflow: hidden;
     position: relative;
     height: 56px;
@@ -318,7 +465,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
     font-size: 14px;
     font-weight: 700;
-    color: #CCFF00;
+    color: #000000;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     padding: 0 80px;
@@ -326,35 +473,35 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Spec Sheet Grid */
 .spec-sheet {
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .spec-row {
     display: grid;
     grid-template-columns: 30% 70%;
-    border-top: 1px solid #000000;
+    border-top: 1px solid var(--border-color);
 }
 
 .spec-row:last-child {
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .spec-label {
     padding: 60px 40px;
-    border-right: 1px solid #000000;
+    border-right: 1px solid var(--border-color);
     display: flex;
     align-items: center;
-    background-color: #F0F0F0;
+    background-color: var(--bg-secondary);
     transition: background-color 0.2s ease;
     position: relative;
 }
 
 .spec-label:hover {
-    animation: glitch-flash-green 0.2s ease;
+    animation: glitch-flash-green-dark 0.2s ease;
 }
 
 .spec-row:nth-child(even) .spec-label:hover {
-    animation: glitch-flash-purple 0.2s ease;
+    animation: glitch-flash-purple-dark 0.2s ease;
 }
 
 @keyframes glitch-flash-green {
@@ -381,20 +528,44 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+@keyframes glitch-flash-green-dark {
+    0% {
+        background-color: var(--bg-secondary);
+    }
+    50% {
+        background-color: var(--accent-green);
+    }
+    100% {
+        background-color: var(--bg-secondary);
+    }
+}
+
+@keyframes glitch-flash-purple-dark {
+    0% {
+        background-color: var(--bg-secondary);
+    }
+    50% {
+        background-color: var(--accent-purple);
+    }
+    100% {
+        background-color: var(--bg-secondary);
+    }
+}
+
 .spec-label-text {
     font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #000000;
+    color: var(--text-primary);
 }
 
 .spec-content {
     padding: 60px 40px;
     display: flex;
     align-items: center;
-    background-color: #F0F0F0;
+    background-color: var(--bg-primary);
 }
 
 .spec-narrative {
@@ -402,7 +573,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.8;
-    color: #000000;
+    color: var(--text-primary);
     margin: 0;
 }
 
@@ -422,20 +593,20 @@ h1, h2, h3, h4, h5, h6 {
 .spec-list-num {
     font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
     font-weight: 700;
-    color: #000000;
+    color: var(--accent-green);
     min-width: 24px;
 }
 
 /* Operatives Section */
 .operatives-section {
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid var(--border-color);
     padding: 0;
 }
 
 .operatives-header {
     padding: 60px 40px 40px;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .operatives-title {
@@ -444,7 +615,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #000000;
+    color: var(--text-primary);
     margin: 0;
 }
 
@@ -454,12 +625,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .operative-item {
     padding: 40px 40px;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid var(--border-color);
     font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.05em;
-    color: #000000;
+    color: var(--text-primary);
     line-height: 1.8;
 }
 
@@ -473,8 +644,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .redacted-block {
-    background-color: #000000;
-    color: #000000;
+    background-color: var(--text-primary);
+    color: var(--text-primary);
     padding: 4px 12px;
     margin: 0 8px;
     display: inline-block;
@@ -488,15 +659,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* FAQ Section (Brutalist Accordion) */
 .faq-section {
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .faq-container {
-    border-top: 1px solid #000000;
+    border-top: 1px solid var(--border-color);
 }
 
 .faq-item {
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid var(--border-color);
 }
 
 .faq-item:last-child {
@@ -506,9 +677,9 @@ h1, h2, h3, h4, h5, h6 {
 .faq-question {
     width: 100%;
     padding: 40px;
-    background-color: #F0F0F0;
+    background-color: var(--bg-primary);
     border: none;
-    border-bottom: 2px solid #000000;
+    border-bottom: 2px solid var(--border-color);
     text-align: left;
     cursor: pointer;
     display: flex;
@@ -519,38 +690,42 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #000000;
+    color: var(--text-primary);
     transition: background-color 0.2s ease;
 }
 
 .faq-question:hover {
-    background-color: #000000;
-    color: #F0F0F0;
+    background-color: var(--accent-green);
+    color: #000000;
 }
 
 .faq-question:hover .faq-q-label,
 .faq-question:hover .faq-q-text {
-    color: #F0F0F0;
+    color: #000000;
 }
 
 .faq-q-label {
     font-weight: 700;
-    color: #000000;
+    color: var(--text-primary);
     transition: color 0.2s ease;
 }
 
 .faq-q-text {
     flex: 1;
     font-weight: 700;
-    color: #000000;
+    color: var(--text-primary);
     transition: color 0.2s ease;
 }
 
 .faq-toggle {
     font-size: 24px;
     font-weight: 700;
-    color: #CCFF00;
+    color: var(--accent-green);
     transition: transform 0.3s ease;
+}
+
+.faq-question:hover .faq-toggle {
+    color: #000000;
 }
 
 .faq-question[aria-expanded="true"] .faq-toggle {
@@ -561,8 +736,8 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    background-color: #F0F0F0;
-    border-bottom: 2px solid #000000;
+    background-color: var(--bg-secondary);
+    border-bottom: 2px solid var(--border-color);
     display: flex;
     align-items: center;
     gap: 16px;
@@ -571,14 +746,14 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.8;
-    color: #000000;
+    color: var(--text-primary);
 }
 
 .faq-a-label {
     font-family: 'Space Mono', 'Courier New', 'IBM Plex Mono', monospace;
     font-weight: 700;
     text-transform: uppercase;
-    color: #000000;
+    color: var(--accent-green);
 }
 
 .faq-a-text {
@@ -589,15 +764,15 @@ h1, h2, h3, h4, h5, h6 {
 /* Footer */
 .footer {
     padding: 0;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
 .footer-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 0;
-    border-top: 1px solid #000000;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-item {
@@ -606,8 +781,9 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    border-right: 1px solid #000000;
+    border-right: 1px solid var(--border-color);
     text-align: left;
+    color: var(--text-secondary);
 }
 
 .footer-item:last-child {
@@ -615,13 +791,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-link {
-    color: #000000;
+    color: var(--text-secondary);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .footer-link:hover {
-    color: #6A0DAD;
+    color: var(--accent-green);
 }
 
 /* Responsive Design */
@@ -634,6 +810,23 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr 1.5fr;
     }
     
+    .value-grid {
+        grid-template-columns: 35% 65%;
+    }
+    
+    .how-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .how-step {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .how-step:last-child {
+        border-bottom: none;
+    }
+    
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -643,7 +836,7 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .footer-item:nth-child(n+3) {
-        border-top: 1px solid #000000;
+        border-top: 1px solid var(--border-color);
     }
 }
 
@@ -669,6 +862,36 @@ h1, h2, h3, h4, h5, h6 {
     
     .headline-line {
         margin-bottom: 0.05em;
+    }
+    
+    .value-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .value-label {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 32px 24px;
+    }
+    
+    .value-content {
+        padding: 32px 24px;
+    }
+    
+    .value-text {
+        font-size: 18px;
+    }
+    
+    .how-header {
+        padding: 40px 24px 32px;
+    }
+    
+    .how-step {
+        padding: 40px 24px;
+    }
+    
+    .step-number {
+        font-size: 36px;
     }
     
     .data-section {
@@ -734,7 +957,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .footer-item {
         border-right: none;
-        border-bottom: 1px solid #000000;
+        border-bottom: 1px solid var(--border-color);
     }
     
     .footer-item:last-child {
@@ -779,12 +1002,12 @@ h1, h2, h3, h4, h5, h6 {
     
     .spec-row {
         grid-template-columns: 1fr;
-        border-top: 1px solid #000000;
+        border-top: 1px solid var(--border-color);
     }
     
     .spec-label {
         border-right: none;
-        border-bottom: 1px solid #000000;
+        border-bottom: 1px solid var(--border-color);
         padding: 32px 24px;
     }
     
